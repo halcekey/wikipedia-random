@@ -106,7 +106,7 @@
             if (!parentCategory) return;
             
             const targetSelect = document.getElementById(level === 1 ? "sub-category-1" : "sub-category-2");
-            targetSelect.innerHTML = '<option value="">（選択しない）</option>';
+            targetSelect.innerHTML = '<option value="">（選択なし）</option>';
 
             fetch(`https://ja.wikipedia.org/w/api.php?action=query&format=json&list=categorymembers&cmtitle=${parentCategory}&cmtype=subcat&cmlimit=50&origin=*`)
                 .then(response => response.json())
